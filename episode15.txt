@@ -1,0 +1,16 @@
+Flash
+Session::flash('index', 'value');
+session()->flash('index', 'value');
+
+Add files to composer autoloader
+"autoload": {
+    "classmap": [
+        "database"
+    ],
+    "psr-4": {
+        "App\\": "app/"
+    },
+    "files": [
+        "app/helpers.php"
+    ]
+},

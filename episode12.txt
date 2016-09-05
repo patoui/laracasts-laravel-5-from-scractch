@@ -1,0 +1,9 @@
+Apply middleware to route
+Route::get('dashboard', 'HomeController@index')->middleware('auth');
+
+Apply middleware in controller (in constructor)
+$this->middleware('auth');
+
+Apply conditions to middleware
+$this->middleware('auth', ['except' => ['index']]);
+$this->middleware('auth', ['only' => ['index']]);

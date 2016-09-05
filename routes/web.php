@@ -24,3 +24,14 @@ Route::post('cards/{card}/notes', 'NotesController@store');
 Route::get('notes/{note}/edit', 'NotesController@edit');
 
 Route::patch('notes/{note}', 'NotesController@update');
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index');
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('begin', function () {
+    flash('You are logged in!', 'success');
+    return redirect('/home');
+});
