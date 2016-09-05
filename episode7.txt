@@ -1,0 +1,5 @@
+1. Model::find($id); = Model::findById($id) = DB::table('model')->where('id', id)->first();
+
+2. return $model; = return response()->json($model);
+
+3. public function show(Card $card)
