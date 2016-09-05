@@ -1,0 +1,10 @@
+1. Form generated fields
+
+{{ csrf_field() }}
+{{ method_field('PATCH') }}
+
+2. Eager loading relationships
+
+Card::with('notes.user')->find(1);
+OR
+$card->load('notes.user');

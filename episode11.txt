@@ -1,0 +1,15 @@
+Get authenticated user's id
+Auth::id()
+
+Simple validation in controllers
+$this->validates(Request $request, $rules = []);
+NOTE: default handle redirects (to prev page) with input and errors
+
+Keep old input in the form on validation fail
+{{ old('field_name') }}
+
+
+===============================================================================
+FROM PREVIOUS LESSON
+return $model;
+NOTE: Will return json output
