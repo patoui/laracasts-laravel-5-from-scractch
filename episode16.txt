@@ -1,0 +1,12 @@
+Getting alias from service container
+App::make('foo') = app('foo')
+
+Singleton refers to a single instance from the service container
+App::singleton(
+    'foo',
+    function () {
+        return new RegistersUser(new Mailer);
+    }
+);
+
+Laravel automatically injects dependencies if all recursive dependencies are properly type hinted
